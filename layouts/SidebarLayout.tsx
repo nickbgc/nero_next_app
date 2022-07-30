@@ -6,14 +6,14 @@ import { ReactProps } from 'types';
 import { Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import {
-  CalendarIcon,
-  ChartBarIcon,
-  FolderIcon,
+  MailIcon,
+  AdjustmentsIcon,
   HomeIcon,
-  InboxIcon,
   MenuIcon,
-  UsersIcon,
   XIcon,
+  BellIcon,
+  MapIcon,
+  CurrencyDollarIcon,
 } from '@heroicons/react/outline';
 import { useDisclosure } from 'hooks';
 import { KryptonomicLogo } from 'components/images';
@@ -21,24 +21,29 @@ import Image from 'next/image';
 
 const navigation = [
   { name: 'Home', href: '/app', icon: HomeIcon, current: true },
-  { name: 'Explore', href: '/app/activity', icon: UsersIcon, current: false },
+  { name: 'Explore', href: '/app/activity', icon: MapIcon, current: false },
   {
     name: 'Notifications',
     href: '/app/notifications',
-    icon: FolderIcon,
+    icon: BellIcon,
     current: false,
   },
   {
     name: 'Messages',
     href: '/app/messages',
-    icon: CalendarIcon,
+    icon: MailIcon,
     current: false,
   },
-  { name: 'Token', href: '/app/token', icon: InboxIcon, current: false },
+  {
+    name: 'Token',
+    href: '/app/token',
+    icon: CurrencyDollarIcon,
+    current: false,
+  },
   {
     name: 'Settings',
     href: '/app/settings',
-    icon: ChartBarIcon,
+    icon: AdjustmentsIcon,
     current: false,
   },
 ];
