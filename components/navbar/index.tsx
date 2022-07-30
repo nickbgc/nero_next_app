@@ -5,6 +5,7 @@ import { useContext } from 'react';
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/solid';
+import Link from 'next/link';
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -79,30 +80,34 @@ export default function Navbar() {
         <div className="flex items-center justify-between w-full py-3 border-b border-zinc-500 lg:border-none">
           <div className="flex items-center">
             <div className="relative w-8 h-8">
-              <a href="#">
-                <Image layout="fill" src={KryptonomicLogo} alt="" />
-              </a>
+              <Link href="/">
+                <a>
+                  <Image layout="fill" src={KryptonomicLogo} alt="" />
+                </a>
+              </Link>
             </div>
             <div className="hidden ml-10 space-x-8 lg:block">
               {navigation.map((link) => {
                 return link.protected ? (
                   user && (
+                    <Link key={link.href} href={link.href}>
+                      <a
+                        key={link.name}
+                        className="p-1 text-base font-medium text-white hover:text-indigo-50"
+                      >
+                        {link.name}
+                      </a>
+                    </Link>
+                  )
+                ) : (
+                  <Link key={link.href} href={link.href}>
                     <a
                       key={link.name}
-                      href={link.href}
-                      className="p-1 text-base font-medium text-white hover:text-indigo-50"
+                      className="text-base font-medium text-white hover:text-indigo-50"
                     >
                       {link.name}
                     </a>
-                  )
-                ) : (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    className="text-base font-medium text-white hover:text-indigo-50"
-                  >
-                    {link.name}
-                  </a>
+                  </Link>
                 );
               })}
             </div>
