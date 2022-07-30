@@ -9,25 +9,27 @@ import {
 } from '@web3auth/base';
 import { OpenloginAdapter } from '@web3auth/openlogin-adapter';
 import { EthereumRpc } from 'utils';
+import Web3 from 'web3';
 
-const clientId = 'YOUR_CLIENT_ID'; // get from https://dashboard.web3auth.io
+const clientId =
+  'BPnVZ7aHOOmlD_QGKd0P13dJkNVbyBJFTOAFtQN8hPv6SYHWXhJJtrFEBaGXcsmTVAmn5r3qCvajYsDAtA7sMWE'; // get from https://dashboard.web3auth.io
 
 type ApplicationContextType = {
   provider: SafeEventEmitterProvider | null;
-  web3Auth: Web3Auth | null;
+  web3Provider: Web3 | null;
   login: () => void;
-  getUserInfo: () => void;
   logout: () => void;
   signMessage: () => void;
+  user: {} | null;
 };
 
 const ApplicationContext = createContext<ApplicationContextType>({
   provider: null,
-  web3Auth: null,
+  web3Provider: null,
   login: () => {},
-  getUserInfo: () => {},
   logout: () => {},
   signMessage: () => {},
+  user: null,
 });
 
 const ApplicationProvider = ({ children }: ReactProps) => {
@@ -35,6 +37,8 @@ const ApplicationProvider = ({ children }: ReactProps) => {
   const [provider, setProvider] = useState<SafeEventEmitterProvider | null>(
     null,
   );
+  const [web3Provider, setWeb3Provider] = useState<Web3 | null>(null);
+  const [user, setUser] = useState<{} | null>(null);
 
   useEffect(() => {
     const init = async () => {
@@ -67,6 +71,7 @@ const ApplicationProvider = ({ children }: ReactProps) => {
             },
           },
         });
+
         web3auth.configureAdapter(openloginAdapter);
         setWeb3auth(web3auth);
 
@@ -83,6 +88,7 @@ const ApplicationProvider = ({ children }: ReactProps) => {
             },
           },
         });
+
         if (web3auth.provider) {
           setProvider(web3auth.provider);
         }
@@ -94,22 +100,40 @@ const ApplicationProvider = ({ children }: ReactProps) => {
     init();
   }, []);
 
+  useEffect(() => {
+    if (provider) {
+      //@ts-ignore
+      const web3 = new Web3(provider);
+      setWeb3Provider(web3);
+    }
+  }, [provider]);
+
+  useEffect(() => {
+    if (web3auth && web3Provider && web3Provider?.currentProvider) {
+      web3Provider.eth.getAccounts().then((a) => {
+        if (a.length > 0) {
+          setUser((user) => ({ ...user, address: a[0] }));
+        }
+      });
+
+      web3auth.getUserInfo().then(async (u) => {
+        await setUser((user) => ({
+          ...user,
+          email: u.email,
+          name: u.name,
+        }));
+      });
+    }
+  }, [web3Provider, web3auth]);
+
   const login = async () => {
+    console.log('Lets do this');
     if (!web3auth) {
       console.log('web3auth not initialized yet');
       return;
     }
     const web3authProvider = await web3auth.connect();
     setProvider(web3authProvider);
-  };
-
-  const getUserInfo = async () => {
-    if (!web3auth) {
-      console.log('web3auth not initialized yet');
-      return;
-    }
-    const user = await web3auth.getUserInfo();
-    console.log(user);
   };
 
   const logout = async () => {
@@ -135,11 +159,11 @@ const ApplicationProvider = ({ children }: ReactProps) => {
     <ApplicationContext.Provider
       value={{
         provider,
-        web3Auth: web3auth,
+        web3Provider: web3Provider,
         login,
-        getUserInfo,
         logout,
         signMessage,
+        user,
       }}
     >
       {children}
