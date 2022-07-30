@@ -1,3 +1,5 @@
+import SidebarLayout from 'layouts/SidebarLayout';
+
 export default function Explore() {
-  return <></>;
+  return <SidebarLayout title={'Explore'}></SidebarLayout>;
 }
