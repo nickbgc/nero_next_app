@@ -4,3 +4,8 @@ export type ReactProps = {
   style?: React.CSSProperties;
   [key: string]: any;
 };
+
+export type ModalProps = {
+  isOpen: boolean;
+  onClose: () => void;
+};
