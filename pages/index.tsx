@@ -16,8 +16,12 @@ export default function Main() {
         <div className="container px-4 py-12 mx-auto ">
           <div className="flex flex-col gap-2">
             <h3 className="text-2xl font-medium">Your</h3>
-            <h1 className="text-8xl display-heading">Kryptonomic</h1>
-            <h3 className="text-2xl display-heading">MEMBERSHIP AWAITS</h3>
+            <h1 className="text-4xl md:text-6xl xl:text-8xl display-heading">
+              Kryptonomic
+            </h1>
+            <h3 className="text-4xl md:text-6xl xl:text-8xl display-heading">
+              MEMBERSHIP AWAITS
+            </h3>
             <div className="py-4">
               <a
                 href="#"
@@ -43,7 +47,9 @@ export default function Main() {
           <div className="flex flex-col gap-2 lg:w-1/2 md:w-2/3 xl:w-1/3">
             <h3 className="text-4xl">
               <span className="font-bold">Earn</span>{' '}
-              <span className="display-heading">$NOMIC</span>{' '}
+              <span className="text-4xl md:text-6xl xl:text-8xl display-heading">
+                $NOMIC
+              </span>{' '}
               <span className="font-bold">with every interaction</span>
             </h3>
             <p className="mt-2 text-xl">
@@ -68,7 +74,9 @@ export default function Main() {
           <div className="flex flex-col gap-2 lg:w-1/2 md:w-2/3 xl:w-1/3">
             <h3 className="text-4xl">
               <span className="font-bold">Exclusive Behind The Scenes</span>{' '}
-              <span className="display-heading">CONTENT AND INTERVIEWS</span>
+              <span className="text-4xl md:text-6xl xl:text-8xl display-heading">
+                CONTENT AND INTERVIEWS
+              </span>
             </h3>
             <p className="mt-2 text-xl">
               Gain access to exclusive content and interviews from the
@@ -93,7 +101,9 @@ export default function Main() {
           <div className="flex flex-col gap-2 lg:w-1/2 md:w-2/3 xl:w-1/3">
             <h3 className="text-4xl">
               <span className="font-bold">Exclusive Nero</span>{' '}
-              <span className="display-heading">MERCHANDISE</span>
+              <span className="text-4xl md:text-6xl xl:text-8xl display-heading">
+                MERCHANDISE
+              </span>
             </h3>
             <p className="mt-2 text-xl">
               All about the Swag? Get access to exclusive Nero Merchandise
@@ -117,7 +127,9 @@ export default function Main() {
           <div className="flex flex-col gap-2 lg:w-1/2 md:w-2/3 xl:w-1/3">
             <h3 className="text-4xl">
               <span className="font-bold">Exclusive</span>{' '}
-              <span className="display-heading">EXPERIENCES</span>{' '}
+              <span className="text-4xl md:text-6xl xl:text-8xl display-heading">
+                EXPERIENCES
+              </span>{' '}
               <span className="font-bold">with Nero.</span>
             </h3>
             <p className="mt-2 text-xl">
@@ -140,7 +152,9 @@ export default function Main() {
         <div className="container px-4 py-12 mx-auto ">
           <div className="flex flex-col gap-2 lg:w-1/2 md:w-2/3 xl:w-1/3">
             <h3 className="text-4xl">
-              <span className="display-heading">PRE-SALE TICKETS</span>
+              <span className="text-4xl md:text-6xl xl:text-8xl display-heading">
+                PRE-SALE TICKETS
+              </span>
             </h3>
             <p className="mt-2 text-xl">
               Early bird tickets are available for Kryptonomic Members. Gain
