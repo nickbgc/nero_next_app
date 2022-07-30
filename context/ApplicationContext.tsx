@@ -123,6 +123,8 @@ const ApplicationProvider = ({ children }: ReactProps) => {
           name: u.name,
         }));
       });
+    } else {
+      setUser(null);
     }
   }, [web3Provider, web3auth]);
 
@@ -143,6 +145,7 @@ const ApplicationProvider = ({ children }: ReactProps) => {
     }
     await web3auth.logout();
     setProvider(null);
+    setUser(null);
   };
 
   const signMessage = async () => {
