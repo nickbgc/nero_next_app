@@ -9,3 +9,15 @@ export type ModalProps = {
   isOpen: boolean;
   onClose: () => void;
 };
+
+export type PostProps = {
+  type: 'video' | 'announcement' | 'poll' | 'text';
+  text: string;
+  user: {
+    name: string;
+    avatar: string;
+  };
+  date: string;
+  interaction_reward: number;
+  poll_options?: string[];
+};

@@ -155,9 +155,9 @@ export default function SidebarLayout({ children, title }: ReactProps) {
                         </div>
                         <div className="ml-3">
                           <p className="text-base font-medium text-white">
-                            {(user as any)?.address.substring(0, 6)}...
-                            {(user as any)?.address.substring(
-                              (user as any)?.address.length - 4,
+                            {(user as any)?.address?.substring(0, 6)}...
+                            {(user as any)?.address?.substring(
+                              (user as any)?.address?.length - 4,
                             )}{' '}
                           </p>
                           <p
@@ -221,9 +221,9 @@ export default function SidebarLayout({ children, title }: ReactProps) {
                   </div>
                   <div className="ml-3">
                     <p className="text-sm font-medium text-white">
-                      {(user as any)?.address.substring(0, 6)}...
-                      {(user as any)?.address.substring(
-                        (user as any)?.address.length - 4,
+                      {(user as any)?.address?.substring(0, 6)}...
+                      {(user as any)?.address?.substring(
+                        (user as any)?.address?.length - 4,
                       )}{' '}
                     </p>
                     <p
@@ -250,7 +250,7 @@ export default function SidebarLayout({ children, title }: ReactProps) {
             </button>
             <h3 className="text-xl font-bold">Kryptonomic</h3>
           </div>
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 pt-0 pb-4">{children}</main>
         </div>
       </div>
     </>
