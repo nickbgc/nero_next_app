@@ -1,9 +1,19 @@
+import Footer from 'components/footer';
 import { KryptonomicLogo } from 'components/images';
 import Head from 'next/head';
 import Image from 'next/image';
 import { ReactProps } from 'types';
 
-const navigation = [{ name: 'Member Benefits', href: '/benefits' }];
+const navigation = [
+  {
+    name: 'Home',
+    href: '/',
+  },
+  {
+    name: 'Member Benefits',
+    href: '/benefits',
+  },
+];
 
 export default function NavbarLayout({ children, title }: ReactProps) {
   return (
@@ -11,22 +21,18 @@ export default function NavbarLayout({ children, title }: ReactProps) {
       <Head>
         <title> {title} - Kryptonomic</title>
       </Head>
-      <header className="bg-indigo-600">
+      <header className="bg-light_background">
         <nav
           className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8"
           aria-label="Top"
         >
-          <div className="flex items-center justify-between w-full py-6 border-b border-indigo-500 lg:border-none">
+          <div className="flex items-center justify-between w-full py-3 border-b border-zinc-500 lg:border-none">
             <div className="flex items-center">
-              <a href="#">
-                <span className="sr-only">Workflow</span>
-                <Image
-                  className="w-auto h-10"
-                  src={KryptonomicLogo}
-                  layout="fill"
-                  alt=""
-                />
-              </a>
+              <div className="relative w-8 h-8">
+                <a href="#">
+                  <Image layout="fill" src={KryptonomicLogo} alt="" />
+                </a>
+              </div>
               <div className="hidden ml-10 space-x-8 lg:block">
                 {navigation.map((link) => (
                   <a
@@ -42,7 +48,7 @@ export default function NavbarLayout({ children, title }: ReactProps) {
             <div className="ml-10 space-x-4">
               <a
                 href="#"
-                className="inline-block px-4 py-2 text-base font-medium text-white bg-indigo-500 border border-transparent rounded-md hover:bg-opacity-75"
+                className="inline-block px-6 py-1 text-base font-medium text-white rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-orange-500"
               >
                 Sign in
               </a>
@@ -62,6 +68,9 @@ export default function NavbarLayout({ children, title }: ReactProps) {
         </nav>
       </header>
       <main>{children}</main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }
