@@ -125,15 +125,29 @@ export default function Navbar() {
           </div>
         </div>
         <div className="flex flex-wrap justify-center py-4 space-x-6 lg:hidden">
-          {navigation.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-base font-medium text-white hover:text-indigo-50"
-            >
-              {link.name}
-            </a>
-          ))}
+          {navigation.map((link) => {
+            return link.protected ? (
+              user && (
+                <Link key={link.href} href={link.href}>
+                  <a
+                    key={link.name}
+                    className="p-1 text-base font-medium text-white hover:text-indigo-50"
+                  >
+                    {link.name}
+                  </a>
+                </Link>
+              )
+            ) : (
+              <Link key={link.href} href={link.href}>
+                <a
+                  key={link.name}
+                  className="text-base font-medium text-white hover:text-indigo-50"
+                >
+                  {link.name}
+                </a>
+              </Link>
+            );
+          })}
         </div>
       </nav>
     </header>

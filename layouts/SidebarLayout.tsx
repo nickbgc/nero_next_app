@@ -48,7 +48,7 @@ function classNames(...classes: string[]) {
 }
 
 export default function SidebarLayout({ children, title }: ReactProps) {
-  const { user } = useContext(ApplicationContext);
+  const { user, logout } = useContext(ApplicationContext);
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
@@ -155,8 +155,11 @@ export default function SidebarLayout({ children, title }: ReactProps) {
                               (user as any)?.address.length - 4,
                             )}{' '}
                           </p>
-                          <p className="text-sm font-medium text-gray-200 group-hover:text-white">
-                            View profile
+                          <p
+                            onClick={logout}
+                            className="text-sm font-medium text-gray-200 group-hover:text-white"
+                          >
+                            Logout
                           </p>
                         </div>
                       </div>
@@ -218,8 +221,11 @@ export default function SidebarLayout({ children, title }: ReactProps) {
                         (user as any)?.address.length - 4,
                       )}{' '}
                     </p>
-                    <p className="text-xs font-medium text-indigo-200 group-hover:text-white">
-                      View profile
+                    <p
+                      onClick={logout}
+                      className="text-xs font-medium text-indigo-200 group-hover:text-white"
+                    >
+                      Logout
                     </p>
                   </div>
                 </div>
