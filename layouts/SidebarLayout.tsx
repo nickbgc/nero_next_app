@@ -19,6 +19,7 @@ import {
 import { useDisclosure } from 'hooks';
 import { KryptonomicLogo } from 'components/images';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const navigation = [
   { name: 'Home', href: '/app', icon: HomeIcon, current: true },
@@ -124,23 +125,23 @@ export default function SidebarLayout({ children, title }: ReactProps) {
                     </div>
                     <nav className="px-2 mt-5 space-y-1">
                       {navigation.map((item) => (
-                        <a
-                          key={item.name}
-                          href={item.href}
-                          className={classNames(
-                            item.current
-                              ? 'bg-sidebar-background text-white'
-                              : 'text-white hover:bg-background hover:bg-opacity-75',
-                            'group flex items-center px-2 py-2 text-base font-medium rounded-md',
-                          )}
-                        >
-                          <item.icon
-                            className="flex-shrink-0 w-6 h-6 mr-4 text-gray-300"
-                            aria-hidden="true"
-                          />
+                        <Link key={item.name} href={item.href}>
+                          <a
+                            className={classNames(
+                              item.current
+                                ? 'bg-sidebar-background text-white'
+                                : 'text-white hover:bg-background hover:bg-opacity-75',
+                              'group flex items-center px-2 py-2 text-base font-medium rounded-md',
+                            )}
+                          >
+                            <item.icon
+                              className="flex-shrink-0 w-6 h-6 mr-4 text-gray-300"
+                              aria-hidden="true"
+                            />
 
-                          {item.name}
-                        </a>
+                            {item.name}
+                          </a>
+                        </Link>
                       ))}
                     </nav>
                   </div>
@@ -190,23 +191,23 @@ export default function SidebarLayout({ children, title }: ReactProps) {
               </div>
               <nav className="flex-1 px-2 mt-5 space-y-1">
                 {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className={classNames(
-                      item.current
-                        ? 'bg-sidebar-background text-white'
-                        : 'text-white hover:bg-background hover:bg-opacity-75',
-                      'group flex items-center px-2 py-2 text-sm font-medium rounded-md',
-                    )}
-                  >
-                    <item.icon
-                      className="flex-shrink-0 w-6 h-6 mr-4 text-gray-200"
-                      aria-hidden="true"
-                    />
+                  <Link key={item.name} href={item.href}>
+                    <a
+                      className={classNames(
+                        item.current
+                          ? 'bg-sidebar-background text-white'
+                          : 'text-white hover:bg-background hover:bg-opacity-75',
+                        'group flex items-center px-2 py-2 text-sm font-medium rounded-md',
+                      )}
+                    >
+                      <item.icon
+                        className="flex-shrink-0 w-6 h-6 mr-4 text-gray-200"
+                        aria-hidden="true"
+                      />
 
-                    {item.name}
-                  </a>
+                      {item.name}
+                    </a>
+                  </Link>
                 ))}
               </nav>
             </div>
