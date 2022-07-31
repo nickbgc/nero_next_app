@@ -6,6 +6,7 @@ import {
 import Avatar from 'components/images/Avatar';
 import { PostProps } from 'types';
 import YouTube from 'react-youtube';
+import CommerceCard from './CommerceCard';
 
 export default function Post(props: PostProps) {
   return (
@@ -21,6 +22,18 @@ export default function Post(props: PostProps) {
           <div className="flex items-center gap-4 font-medium text-gray-200">
             <ChartBarIcon className="w-4 h-4" />
             <p className="text-sm font-medium">This week&#39;s Poll</p>
+          </div>
+        )}
+        {props.type === 'section' && (
+          <div className="w-full pt-4 pl-2">
+            <div className="flex w-full gap-4 overflow-x-scroll snap-mandatory snap-x flex-nowrap hide-scrollbar">
+              {props.section?.items.map((item, index) => (
+                <CommerceCard key={index} {...item} />
+              ))}
+            </div>
+            <div className="flex justify-center mt-8">
+              <p>{props.section?.more_button_text}</p>
+            </div>
           </div>
         )}
       </div>
@@ -80,11 +93,11 @@ export default function Post(props: PostProps) {
               <div className="flex w-full h-[28rem] ">
                 <YouTube
                   opts={{ width: '100%', height: '100%' }}
-                  videoId="2g811Eo7K8U"
+                  videoId="1FEVbW9a3Jk"
                   className="w-full h-full"
                 />
               </div>
-              <div className="bottom-0 left-0 w-full h-auto py-4 ">
+              <div className="bottom-0 left-0 w-full h-auto max-w-md py-4 ">
                 <div className="flex flex-col text-gray-200 divide-y divide-light_background">
                   <p className="py-1 text-2xl font-bold text-white lg:text-4xl">
                     {props.text}

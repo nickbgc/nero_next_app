@@ -14,6 +14,7 @@ import {
   BellIcon,
   MapIcon,
   CurrencyDollarIcon,
+  SearchIcon,
 } from '@heroicons/react/outline';
 import { useDisclosure } from 'hooks';
 import { KryptonomicLogo } from 'components/images';
@@ -242,7 +243,7 @@ export default function SidebarLayout({ children, title }: ReactProps) {
           <div className="sticky top-0 z-10 flex items-center gap-4 pt-1 pl-1 text-white bg-light_background md:hidden sm:pl-3 sm:pt-3">
             <button
               type="button"
-              className="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              className="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none"
               onClick={onOpen}
             >
               <span className="sr-only">Open sidebar</span>
@@ -250,7 +251,83 @@ export default function SidebarLayout({ children, title }: ReactProps) {
             </button>
             <h3 className="text-xl font-bold">Kryptonomic</h3>
           </div>
-          <main className="flex-1 pt-0 pb-4">{children}</main>
+          <main className="flex flex-1 pt-0 pb-4">
+            <div className="container flex-1">{children}</div>
+            <div className="flex-col hidden p-4 w-96 lg:flex">
+              <div className="relative flex items-center mt-1">
+                <div className="absolute inset-y-0 left-0 flex items-center px-2 pointer-events-none">
+                  <SearchIcon className="w-4 h-4 text-gray-300" />
+                </div>
+                <input
+                  type="text"
+                  name="search"
+                  id="search"
+                  className="block w-full pl-8 pr-12 border rounded-md border-light_background bg-card-light_background sm:text-sm"
+                />
+                <div className="absolute inset-y-0 right-0 flex py-1.5 pr-2">
+                  <kbd className="inline-flex items-center px-2 font-sans text-sm font-medium text-gray-400 border border-gray-200 rounded">
+                    ⌘K
+                  </kbd>
+                </div>
+              </div>
+              <div className="py-8">
+                <div className="p-3 text-gray-200 rounded-md bg-light_background">
+                  <h3 className="py-2 text-xl font-bold text-white">
+                    Community Highlights
+                  </h3>
+                  <div className="flex items-center gap-2 py-2 text-gray-100">
+                    <img
+                      className="w-8 h-8 rounded-full"
+                      src="https://i.pravatar.cc/300?img=17"
+                      alt="User 3"
+                    />
+                    <p className="font-semibold text-white">Greg Snow</p> &bull;{' '}
+                    <span className="text-sm text-gray-300">8h ago</span>
+                  </div>
+                  <p className="py-1">
+                    Last night was unreal, front row or bust!
+                  </p>
+                  <div className="py-2">
+                    <img
+                      src="https://i.pravatar.cc/300?img=30"
+                      alt="User 3"
+                      className="object-cover w-full h-64 rounded-md"
+                    />
+                  </div>
+                  <p className="py-2 font-semibold text-white">Show more</p>
+                </div>
+              </div>
+              <div className="py-8">
+                <div className="p-3 text-gray-200 rounded-md bg-light_background">
+                  <h3 className="py-2 pb-4 text-xl font-bold text-white">
+                    More from Nero
+                  </h3>
+
+                  <div className="relative h-64 ">
+                    <img
+                      src="https://i.pravatar.cc/300?img=32"
+                      alt="User 3"
+                      className="object-cover w-full h-64 rounded-md"
+                    />
+                    <div className="absolute bottom-0 left-0 w-full h-16 px-3 py-2 bg-gradient-to-t from-black">
+                      Last night was unreal, front row or bust!
+                    </div>
+                  </div>
+                  <div className="py-4" />
+                  <div className="relative h-64 ">
+                    <img
+                      src="https://i.pravatar.cc/300?img=34"
+                      alt="User 3"
+                      className="object-cover w-full h-64 rounded-md"
+                    />
+                    <div className="absolute bottom-0 left-0 w-full h-16 px-3 py-2 bg-gradient-to-t from-black">
+                      Last night was unreal, front row or bust!
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
         </div>
       </div>
     </>

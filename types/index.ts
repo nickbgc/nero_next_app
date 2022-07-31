@@ -11,13 +11,28 @@ export type ModalProps = {
 };
 
 export type PostProps = {
-  type: 'video' | 'announcement' | 'poll' | 'text';
+  type: 'video' | 'announcement' | 'poll' | 'text' | 'section';
   text: string;
   user: {
     name: string;
     avatar: string;
   };
-  date: string;
+  date?: string;
   interaction_reward: number;
   poll_options?: string[];
+  section?: {
+    type: 'merch' | 'experience';
+    title: string;
+    more_button_text: string;
+    items: Array<CommerceCardProps>;
+  };
+};
+
+export type CommerceCardProps = {
+  type: 'merch' | 'experience';
+  available: number;
+  purchase_reward: number;
+  interaction_reward: number;
+  title: string;
+  image: string;
 };

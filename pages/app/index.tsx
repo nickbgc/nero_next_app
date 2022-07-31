@@ -24,6 +24,54 @@ const data: Array<PostProps> = [
     interaction_reward: 4,
   },
   {
+    type: 'section',
+    section: {
+      title: 'Trending Merchandise',
+      more_button_text: 'View more in store',
+      type: 'merch',
+      items: [
+        {
+          type: 'merch',
+          available: 10,
+          purchase_reward: 4,
+          interaction_reward: 4,
+          title: 'Lorem ipsum dolor sit amet',
+          image: 'https://i.pravatar.cc/300?img=1',
+        },
+        {
+          type: 'merch',
+          available: 10,
+          purchase_reward: 4,
+          interaction_reward: 4,
+          title: 'Nero Tour Shirt',
+          image: 'https://i.pravatar.cc/300?img=4',
+        },
+        {
+          type: 'experience',
+          available: 10,
+          purchase_reward: 4,
+          interaction_reward: 4,
+          title: 'Dinner before the show',
+          image: 'https://i.pravatar.cc/300?img=12',
+        },
+        {
+          type: 'experience',
+          available: 10,
+          purchase_reward: 4,
+          interaction_reward: 4,
+          title: 'VIP Experience',
+          image: 'https://i.pravatar.cc/300?img=10',
+        },
+      ],
+    },
+    user: {
+      name: 'John Doe',
+      avatar: 'https://i.pravatar.cc/300?img=2',
+    },
+    interaction_reward: 0,
+    text: '',
+  },
+  {
     type: 'poll',
     text: 'We want to thank everyone who came out yesterday, what a show!',
     user: {
