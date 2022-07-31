@@ -62,7 +62,7 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function Example() {
+export default function CommentEditor() {
   const [selected, setSelected] = useState(moods[5]);
 
   return (
@@ -76,7 +76,7 @@ export default function Example() {
       </div>
       <div className="flex-1 min-w-0">
         <form action="#">
-          <div className="border-b border-gray-200 focus-within:border-indigo-600">
+          <div className=" focus-within:border-orange-600">
             <label htmlFor="comment" className="sr-only">
               Add your comment
             </label>
@@ -84,7 +84,7 @@ export default function Example() {
               rows={3}
               name="comment"
               id="comment"
-              className="block w-full p-0 pb-2 border-0 border-b border-transparent resize-none focus:ring-0 focus:border-indigo-600 sm:text-sm"
+              className="block w-full p-2 pb-2 border-0 border-b border-transparent rounded-md resize-none bg-light_background focus:ring-0 focus:border-orange-600 sm:text-sm"
               placeholder="Add your comment..."
               defaultValue={''}
             />
@@ -144,13 +144,15 @@ export default function Example() {
                           leaveFrom="opacity-100"
                           leaveTo="opacity-0"
                         >
-                          <Listbox.Options className="absolute z-10 py-3 -ml-6 text-base bg-white rounded-lg shadow w-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:ml-auto sm:w-64 sm:text-sm">
+                          <Listbox.Options className="absolute z-10 py-3 -ml-6 text-base rounded-lg shadow bg-light_background w-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:ml-auto sm:w-64 sm:text-sm">
                             {moods.map((mood) => (
                               <Listbox.Option
                                 key={mood.value}
                                 className={({ active }) =>
                                   classNames(
-                                    active ? 'bg-gray-100' : 'bg-white',
+                                    active
+                                      ? 'bg-background'
+                                      : 'bg-light_background',
                                     'cursor-default select-none relative py-2 px-3',
                                   )
                                 }
@@ -171,7 +173,7 @@ export default function Example() {
                                       aria-hidden="true"
                                     />
                                   </div>
-                                  <span className="block ml-3 font-medium truncate">
+                                  <span className="block ml-3 font-medium text-gray-100 truncate">
                                     {mood.name}
                                   </span>
                                 </div>
@@ -188,7 +190,7 @@ export default function Example() {
             <div className="flex-shrink-0">
               <button
                 type="submit"
-                className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="inline-flex items-center px-4 py-2 text-sm font-semibold text-white rounded-md bg-light_background"
               >
                 Post
               </button>

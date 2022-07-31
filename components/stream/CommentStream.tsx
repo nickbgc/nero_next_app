@@ -6,19 +6,43 @@ const activity = [
     id: 1,
     author: {
       name: 'Eduardo Benz',
-      avatar:
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      avatar: 'https://i.pravatar.cc/300?img=1',
     },
     comment:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam cursus quis sed purus nam. ',
-    date: new Date().getTime(),
+    date: '3 hours ago',
+  },
+  {
+    id: 2,
+    author: {
+      name: 'Eduardo Benz',
+      avatar: 'https://i.pravatar.cc/300?img=1',
+    },
+    comment:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam cursus quis sed purus nam. ',
+    date: '10 min ago',
+  },
+  {
+    id: 3,
+    author: {
+      name: 'Eduardo Benz',
+      avatar: 'https://i.pravatar.cc/300?img=1',
+    },
+    comment:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam cursus quis sed purus nam. ',
+    date: 'an hour ago',
   },
 ];
 
 export default function CommentStream() {
   return (
     <div className="flow-root">
-      <ul role="list" className="-mb-8">
+      <div className="py-4">
+        <h2 className="font-semibold text-white">
+          Comments ({activity.length})
+        </h2>
+      </div>
+      <ul role="list" className="px-4 py-8">
         {activity.map((activityItem, activityItemIdx) => (
           <li key={activityItem.id}>
             <div className="relative pb-8">
