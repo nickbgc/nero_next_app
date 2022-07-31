@@ -1,7 +1,7 @@
 export default function ValuationCard() {
   return (
     <div className="p-4 bg-card-background">
-      <h3 className="text-xl font-bold text-white">Valuation</h3>
+      <h3 className="text-xl font-bold text-center text-white">Valuation</h3>
       <div className="flex flex-col gap-2 py-4">
         <div className="flex justify-center py-2">
           <p className="text-gray-200">
