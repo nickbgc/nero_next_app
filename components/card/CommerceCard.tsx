@@ -3,7 +3,11 @@ import { CommerceCardProps } from 'types';
 
 export default function CommerceCard(props: CommerceCardProps) {
   return (
-    <div className="flex-shrink-0 w-full rounded-md md:w-1/2 snap-center bg-light_background">
+    <div
+      className={` ${
+        props.inGrid ? 'col-span-1' : 'flex-shrink-0 w-full md:w-1/2'
+      } rounded-md  snap-center bg-light_background`}
+    >
       <div className="flex flex-col divide-y divide-background">
         <div className="p-3">
           <div className="relative w-full h-64">

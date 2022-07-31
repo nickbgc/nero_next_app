@@ -35,4 +35,5 @@ export type CommerceCardProps = {
   interaction_reward: number;
   title: string;
   image: string;
+  inGrid?: boolean;
 };

@@ -22,7 +22,7 @@ import Image from 'next/image';
 
 const navigation = [
   { name: 'Home', href: '/app', icon: HomeIcon, current: true },
-  { name: 'Explore', href: '/app/activity', icon: MapIcon, current: false },
+  { name: 'Explore', href: '/app/commerce', icon: MapIcon, current: false },
   {
     name: 'Notifications',
     href: '/app/notifications',
@@ -278,7 +278,7 @@ export default function SidebarLayout({ children, title }: ReactProps) {
                   <div className="flex items-center gap-2 py-2 text-gray-100">
                     <img
                       className="w-8 h-8 rounded-full"
-                      src="https://i.pravatar.cc/300?img=17"
+                      src="https://i.pravatar.cc/300?img=34"
                       alt="User 3"
                     />
                     <p className="font-semibold text-white">Greg Snow</p> &bull;{' '}
@@ -289,7 +289,7 @@ export default function SidebarLayout({ children, title }: ReactProps) {
                   </p>
                   <div className="py-2">
                     <img
-                      src="https://i.pravatar.cc/300?img=30"
+                      src="https://images.pexels.com/photos/7974892/pexels-photo-7974892.jpeg?auto=compress&cs=tinysrgb&w=800"
                       alt="User 3"
                       className="object-cover w-full h-64 rounded-md"
                     />
@@ -305,23 +305,23 @@ export default function SidebarLayout({ children, title }: ReactProps) {
 
                   <div className="relative h-64 ">
                     <img
-                      src="https://i.pravatar.cc/300?img=32"
+                      src="https://images.pexels.com/photos/9809837/pexels-photo-9809837.jpeg?auto=compress&cs=tinysrgb&w=800"
                       alt="User 3"
                       className="object-cover w-full h-64 rounded-md"
                     />
                     <div className="absolute bottom-0 left-0 w-full h-16 px-3 py-2 bg-gradient-to-t from-black">
-                      Last night was unreal, front row or bust!
+                      Behind the Curtains
                     </div>
                   </div>
                   <div className="py-4" />
                   <div className="relative h-64 ">
                     <img
-                      src="https://i.pravatar.cc/300?img=34"
+                      src="https://images.pexels.com/photos/1049622/pexels-photo-1049622.jpeg?auto=compress&cs=tinysrgb&w=800"
                       alt="User 3"
                       className="object-cover w-full h-64 rounded-md"
                     />
                     <div className="absolute bottom-0 left-0 w-full h-16 px-3 py-2 bg-gradient-to-t from-black">
-                      Last night was unreal, front row or bust!
+                      Our favorite perfomances
                     </div>
                   </div>
                 </div>
