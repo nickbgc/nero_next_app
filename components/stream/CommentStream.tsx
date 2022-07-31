@@ -5,8 +5,8 @@ const activity = [
   {
     id: 1,
     author: {
-      name: 'Eduardo Benz',
-      avatar: 'https://i.pravatar.cc/300?img=1',
+      name: 'Nick Harmon',
+      avatar: 'https://i.pravatar.cc/300?img=53',
     },
     comment:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam cursus quis sed purus nam. ',
@@ -15,8 +15,8 @@ const activity = [
   {
     id: 2,
     author: {
-      name: 'Eduardo Benz',
-      avatar: 'https://i.pravatar.cc/300?img=1',
+      name: 'Tatenda Christopher',
+      avatar: 'https://i.pravatar.cc/300?img=56',
     },
     comment:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam cursus quis sed purus nam. ',
@@ -25,8 +25,8 @@ const activity = [
   {
     id: 3,
     author: {
-      name: 'Eduardo Benz',
-      avatar: 'https://i.pravatar.cc/300?img=1',
+      name: 'Greg Campbell',
+      avatar: 'https://i.pravatar.cc/300?img=52',
     },
     comment:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam cursus quis sed purus nam. ',
