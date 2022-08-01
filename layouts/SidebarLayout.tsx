@@ -25,7 +25,7 @@ const navigation = [
   { name: 'Explore', href: '/app/community', icon: MapIcon, current: false },
   {
     name: 'Token',
-    href: '/app/notifications',
+    href: '/app/token',
     icon: BellIcon,
     current: false,
   },

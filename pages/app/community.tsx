@@ -260,7 +260,7 @@ export default function Community() {
                 )
               }
             >
-              Feed
+              Featured
             </Tab>
             <Tab
               className={({ selected }) =>
