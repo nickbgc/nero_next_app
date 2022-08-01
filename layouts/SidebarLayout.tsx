@@ -13,7 +13,6 @@ import {
   XIcon,
   BellIcon,
   MapIcon,
-  CurrencyDollarIcon,
   SearchIcon,
 } from '@heroicons/react/outline';
 import { useDisclosure } from 'hooks';
@@ -23,9 +22,9 @@ import Link from 'next/link';
 
 const navigation = [
   { name: 'Home', href: '/app', icon: HomeIcon, current: true },
-  { name: 'Explore', href: '/app/commerce', icon: MapIcon, current: false },
+  { name: 'Explore', href: '/app/community', icon: MapIcon, current: false },
   {
-    name: 'Notifications',
+    name: 'Token',
     href: '/app/notifications',
     icon: BellIcon,
     current: false,
@@ -34,12 +33,6 @@ const navigation = [
     name: 'Messages',
     href: '/app/messages',
     icon: MailIcon,
-    current: false,
-  },
-  {
-    name: 'Token',
-    href: '/app/token',
-    icon: CurrencyDollarIcon,
     current: false,
   },
   {
