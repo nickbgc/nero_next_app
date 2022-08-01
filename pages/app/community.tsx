@@ -288,15 +288,15 @@ export default function Community() {
     <SidebarLayout title={'Community Store'}>
       <div className="w-full px-4 py-4">
         <Tab.Group>
-          <Tab.List className="flex w-full p-1 space-x-1 rounded-xl bg-light_background">
+          <Tab.List className="flex w-full space-x-1 border-b border-light_background">
             <Tab
               className={({ selected }) =>
                 classNames(
-                  'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-background',
+                  'w-full py-2.5 text-sm font-medium leading-5 ',
                   'focus:outline-none',
                   selected
-                    ? 'bg-white shadow font-semibold'
-                    : 'text-blue-100 hover:bg-white/[0.12] hover:text-white',
+                    ? 'border-b-8 border-light_background shadow font-semibold text-white'
+                    : 'text-gray-200',
                 )
               }
             >
@@ -305,11 +305,11 @@ export default function Community() {
             <Tab
               className={({ selected }) =>
                 classNames(
-                  'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-background',
+                  'w-full py-2.5 text-sm font-medium leading-5',
                   'focus:outline-none',
                   selected
-                    ? 'bg-white shadow font-semibold'
-                    : 'text-blue-100 hover:bg-white/[0.12] hover:text-white',
+                    ? 'border-b-8 border-light_background shadow font-semibold text-white'
+                    : 'text-gray-200',
                 )
               }
             >
@@ -318,11 +318,11 @@ export default function Community() {
             <Tab
               className={({ selected }) =>
                 classNames(
-                  'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-background',
+                  'w-full py-2.5 text-sm font-medium leading-5 ',
                   'focus:outline-none',
                   selected
-                    ? 'bg-white shadow font-semibold'
-                    : 'text-blue-100 hover:bg-white/[0.12] hover:text-white',
+                    ? 'border-b-8 border-light_background shadow font-semibold text-white'
+                    : 'text-gray-200',
                 )
               }
             >
