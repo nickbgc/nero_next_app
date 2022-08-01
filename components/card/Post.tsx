@@ -98,7 +98,7 @@ export default function Post(props: PostProps) {
                   <div className="flex w-full h-[28rem] ">
                     <YouTube
                       opts={{ width: '100%', height: '100%' }}
-                      videoId="1FEVbW9a3Jk"
+                      videoId="llDikI2hTtk"
                       className="w-full h-full"
                     />
                   </div>
