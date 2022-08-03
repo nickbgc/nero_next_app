@@ -19,9 +19,11 @@ import { useDisclosure } from 'hooks';
 import { KryptonomicLogo } from 'components/images';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import StickyBox from 'react-sticky-box';
 
 const navigation = [
-  { name: 'Home', href: '/app', icon: HomeIcon, current: true },
+  { name: 'Home', href: '/app', icon: HomeIcon },
   { name: 'Explore', href: '/app/community', icon: MapIcon, current: false },
   {
     name: 'Token',
@@ -50,6 +52,8 @@ function classNames(...classes: string[]) {
 export default function SidebarLayout({ children, title }: ReactProps) {
   const { user, logout } = useContext(ApplicationContext);
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const router = useRouter();
+  const pathname = router.pathname;
   return (
     <>
       <Head>
@@ -121,8 +125,8 @@ export default function SidebarLayout({ children, title }: ReactProps) {
                         <Link key={item.name} href={item.href}>
                           <a
                             className={classNames(
-                              item.current
-                                ? 'bg-sidebar-background text-white'
+                              item.href === pathname
+                                ? 'bg-background text-white'
                                 : 'text-white hover:bg-background hover:bg-opacity-75',
                               'group flex items-center px-2 py-2 text-base font-medium rounded-md',
                             )}
@@ -187,8 +191,8 @@ export default function SidebarLayout({ children, title }: ReactProps) {
                   <Link key={item.name} href={item.href}>
                     <a
                       className={classNames(
-                        item.current
-                          ? 'bg-sidebar-background text-white'
+                        item.href === pathname
+                          ? 'bg-background text-white'
                           : 'text-white hover:bg-background hover:bg-opacity-75',
                         'group flex items-center px-2 py-2 text-sm font-medium rounded-md',
                       )}
@@ -248,78 +252,81 @@ export default function SidebarLayout({ children, title }: ReactProps) {
           <main className="flex flex-1 pt-0 pb-4">
             <div className="container flex-1">{children}</div>
             <div className="flex-col hidden p-4 w-96 lg:flex">
-              <div className="relative flex items-center mt-1">
-                <div className="absolute inset-y-0 left-0 flex items-center px-2 pointer-events-none">
-                  <SearchIcon className="w-4 h-4 text-gray-300" />
-                </div>
-                <input
-                  type="text"
-                  name="search"
-                  id="search"
-                  className="block w-full pl-8 pr-12 border rounded-md border-light_background bg-card-light_background sm:text-sm"
-                />
-                <div className="absolute inset-y-0 right-0 flex py-1.5 pr-2">
-                  <kbd className="inline-flex items-center px-2 font-sans text-sm font-medium text-gray-400 border border-gray-200 rounded">
-                    ⌘K
-                  </kbd>
-                </div>
-              </div>
-              <div className="py-8">
-                <div className="p-3 text-gray-200 rounded-md bg-light_background">
-                  <h3 className="py-2 text-xl font-bold text-white">
-                    Community Highlights
-                  </h3>
-                  <div className="flex items-center gap-2 py-2 text-gray-100">
-                    <img
-                      className="w-8 h-8 rounded-full"
-                      src="https://i.pravatar.cc/300?img=34"
-                      alt="User 3"
-                    />
-                    <p className="font-semibold text-white">Greg Snow</p> &bull;{' '}
-                    <span className="text-sm text-gray-300">8h ago</span>
+              <StickyBox offsetBottom={20}>
+                <div className="relative flex items-center mt-1">
+                  <div className="absolute inset-y-0 left-0 flex items-center px-2 pointer-events-none">
+                    <SearchIcon className="w-4 h-4 text-gray-300" />
                   </div>
-                  <p className="py-1">
-                    Last night was unreal, front row or bust!
-                  </p>
-                  <div className="py-2">
-                    <img
-                      src="https://images.pexels.com/photos/7974892/pexels-photo-7974892.jpeg?auto=compress&cs=tinysrgb&w=800"
-                      alt="User 3"
-                      className="object-cover w-full h-64 rounded-md"
-                    />
+                  <input
+                    type="text"
+                    name="search"
+                    id="search"
+                    className="block w-full pl-8 pr-12 border rounded-md border-light_background bg-card-light_background sm:text-sm"
+                  />
+                  <div className="absolute inset-y-0 right-0 flex py-1.5 pr-2">
+                    <kbd className="inline-flex items-center px-2 font-sans text-sm font-medium text-gray-400 border border-gray-200 rounded">
+                      ⌘K
+                    </kbd>
                   </div>
-                  <p className="py-2 font-semibold text-white">Show more</p>
                 </div>
-              </div>
-              <div className="py-8">
-                <div className="p-3 text-gray-200 rounded-md bg-light_background">
-                  <h3 className="py-2 pb-4 text-xl font-bold text-white">
-                    More from Nero
-                  </h3>
+                <div className="py-8">
+                  <div className="p-3 text-gray-200 rounded-md bg-light_background">
+                    <h3 className="py-2 text-xl font-bold text-white">
+                      Community Highlights
+                    </h3>
+                    <div className="flex items-center gap-2 py-2 text-gray-100">
+                      <img
+                        className="w-8 h-8 rounded-full"
+                        src="https://i.pravatar.cc/300?img=34"
+                        alt="User 3"
+                      />
+                      <p className="font-semibold text-white">Greg Snow</p>{' '}
+                      &bull;{' '}
+                      <span className="text-sm text-gray-300">8h ago</span>
+                    </div>
+                    <p className="py-1">
+                      Last night was unreal, front row or bust!
+                    </p>
+                    <div className="py-2">
+                      <img
+                        src="https://images.pexels.com/photos/7974892/pexels-photo-7974892.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        alt="User 3"
+                        className="object-cover w-full h-64 rounded-md"
+                      />
+                    </div>
+                    <p className="py-2 font-semibold text-white">Show more</p>
+                  </div>
+                </div>
+                <div className="py-8">
+                  <div className="p-3 text-gray-200 rounded-md bg-light_background">
+                    <h3 className="py-2 pb-4 text-xl font-bold text-white">
+                      More from Nero
+                    </h3>
 
-                  <div className="relative h-64 ">
-                    <img
-                      src="https://images.pexels.com/photos/9809837/pexels-photo-9809837.jpeg?auto=compress&cs=tinysrgb&w=800"
-                      alt="User 3"
-                      className="object-cover w-full h-64 rounded-md"
-                    />
-                    <div className="absolute bottom-0 left-0 w-full h-16 px-3 py-2 bg-gradient-to-t from-black">
-                      Behind the Curtains
+                    <div className="relative h-64 ">
+                      <img
+                        src="https://images.pexels.com/photos/9809837/pexels-photo-9809837.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        alt="User 3"
+                        className="object-cover w-full h-64 rounded-md"
+                      />
+                      <div className="absolute bottom-0 left-0 w-full h-16 px-3 py-2 bg-gradient-to-t from-black">
+                        Behind the Curtains
+                      </div>
                     </div>
-                  </div>
-                  <div className="py-4" />
-                  <div className="relative h-64 ">
-                    <img
-                      src="https://images.pexels.com/photos/1049622/pexels-photo-1049622.jpeg?auto=compress&cs=tinysrgb&w=800"
-                      alt="User 3"
-                      className="object-cover w-full h-64 rounded-md"
-                    />
-                    <div className="absolute bottom-0 left-0 w-full h-16 px-3 py-2 bg-gradient-to-t from-black">
-                      Our favorite perfomances
+                    <div className="py-4" />
+                    <div className="relative h-64 ">
+                      <img
+                        src="https://images.pexels.com/photos/1049622/pexels-photo-1049622.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        alt="User 3"
+                        className="object-cover w-full h-64 rounded-md"
+                      />
+                      <div className="absolute bottom-0 left-0 w-full h-16 px-3 py-2 bg-gradient-to-t from-black">
+                        Our favorite perfomances
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </StickyBox>
             </div>
           </main>
         </div>

@@ -1,0 +1,104 @@
+[
+  {
+    "file": "beach towel.jpeg",
+    "title": "Beach Towels",
+    "pointsval": 10,
+    "Price": "$45"
+  },
+  {
+    "file": "Coasters w: QR Code.jpeg",
+    "title": "Coasters with QR",
+    "pointsval": 5,
+    "Price": "$18"
+  },
+  {
+    "file": "Coasters.jpeg",
+    "title": "Coasters",
+    "pointsval": 4,
+    "Price": "$15"
+  },
+  {
+    "file": "Drinking Glass w: QR Code.jpeg",
+    "title": "Drinking Glasses with QR",
+    "pointsval": 5,
+    "Price": "$25"
+  },
+  {
+    "file": "drinking glass.jpeg",
+    "title": "Drinking Glasses",
+    "pointsval": 4,
+    "Price": "$21"
+  },
+  {
+    "file": "Flask.jpeg",
+    "title": "Flask",
+    "pointsval": 10,
+    "Price": "$45"
+  },
+  {
+    "file": "Flip FLops.jpeg",
+    "title": "Flip Flops",
+    "pointsval": 5,
+    "Price": "$20"
+  },
+  {
+    "file": "iphone case.jpeg",
+    "title": "Iphone Cases",
+    "pointsval": 8,
+    "Price": "$29"
+  },
+  {
+    "file": "Keychain.jpeg",
+    "title": "Keychain",
+    "pointsval": 2,
+    "Price": "$5"
+  },
+  {
+    "file": "mugs.jpeg",
+    "title": "Mugs",
+    "pointsval": 3,
+    "Price": "$13"
+  },
+  {
+    "file": "NERO HOODIE w/ QR CODE.jpeg",
+    "title": "Hoodie",
+    "pointsval": 12,
+    "Price": "$65"
+  },
+  {
+    "file": "NERO SHIRT w/ QR CODE.jpeg",
+    "title": "T Shirt",
+    "pointsval": 10,
+    "Price": "$45"
+  },
+  {
+    "file": "Signed Canvas.jpeg",
+    "title": "Signed Canvas",
+    "pointsval": 25,
+    "Price": "$125"
+  },
+  {
+    "file": "Signed Hat.jpeg",
+    "title": "Signed Hat",
+    "pointsval": 10,
+    "Price": "$45"
+  },
+  {
+    "file": "Signed Poster.jpeg",
+    "title": "Signed Poster",
+    "pointsval": 8,
+    "Price": "$25"
+  },
+  {
+    "file": "Sticker 1 w/ QR code.jpeg",
+    "title": "Sticker with QR code",
+    "pointsval": 2,
+    "Price": "$5"
+  },
+  {
+    "file": "Sticker 2.jpeg",
+    "title": "Sticker",
+    "pointsval": 2,
+    "Price": "$5"
+  }
+]
