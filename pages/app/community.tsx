@@ -5,6 +5,7 @@ import { Tab } from '@headlessui/react';
 import Post from 'components/card/Post';
 import shop from '../../data/shop.json';
 import featured from '../../data/featured.json';
+import { Frame } from '.';
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -117,7 +118,7 @@ export default function Community() {
               <Feed />
             </Tab.Panel>
             <Tab.Panel className={classNames('rounded-xl')}>
-              <></>
+              <Frame />
             </Tab.Panel>
             <Tab.Panel
               className={classNames('rounded-xl', 'focus:outline-none ')}

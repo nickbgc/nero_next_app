@@ -143,16 +143,22 @@ const data = [
   },
 ];
 
+export const Frame = () => {
+  return (
+    <div className="w-full divide-y divide-light_background">
+      {data.map((post, index) => (
+        // @ts-ignore
+        <Post key={post.type + index} {...post} />
+      ))}
+      <div />
+    </div>
+  );
+};
+
 export default function Explore() {
   return (
     <SidebarLayout title={'Explore'}>
-      <div className="w-full divide-y divide-light_background">
-        {data.map((post, index) => (
-          // @ts-ignore
-          <Post key={post.type + index} {...post} />
-        ))}
-        <div />
-      </div>
+      <Frame />
     </SidebarLayout>
   );
 }
