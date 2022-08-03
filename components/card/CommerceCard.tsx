@@ -19,10 +19,10 @@ export default function CommerceCard(props: CommerceCardProps) {
           </div>
           <div className="flex flex-col gap-2 pt-2">
             <h3 className="text-xl font-semibold md:text-2xl">{props.title}</h3>
-            <p>Only {props.available} left</p>
+            <p>Only 5 left</p>
             <div className="flex items-center gap-1 text-sm text-gray-200">
               <p>
-                Earn <span className="font-bold">{props.purchase_reward}</span>{' '}
+                Earn <span className="font-bold">{props.pointsval}</span>{' '}
               </p>
               <CurrencyDollarIcon className="w-5 h-5" />{' '}
               <p>with every purchase</p>
@@ -32,8 +32,7 @@ export default function CommerceCard(props: CommerceCardProps) {
         <div className="gap-2 p-3">
           <h4 className="text-semibold">Share to earn</h4>
           <div className="flex items-center gap-1 font-bold">
-            {props.interaction_reward}{' '}
-            <CurrencyDollarIcon className="w-5 h-5" />
+            {props.price} <CurrencyDollarIcon className="w-5 h-5" />
           </div>
         </div>
       </div>

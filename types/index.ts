@@ -29,11 +29,9 @@ export type PostProps = {
 };
 
 export type CommerceCardProps = {
-  type: 'merch' | 'experience';
-  available: number;
-  purchase_reward: number;
-  interaction_reward: number;
+  pointsval: number;
   title: string;
   image: string;
+  price: string;
   inGrid?: boolean;
 };
