@@ -1,6 +1,5 @@
 import { CurrencyDollarIcon } from '@heroicons/react/outline';
 import CommentEditor from 'components/editor/Comment';
-import CommentStream from 'components/stream/CommentStream';
 import SidebarLayout from 'layouts/SidebarLayout';
 import YouTube from 'react-youtube';
 
@@ -33,9 +32,6 @@ export default function Activity() {
         </div>
         <div className="w-full px-4 py-12">
           <CommentEditor />
-        </div>
-        <div className="w-full px-4 py-12">
-          <CommentStream />
         </div>
       </div>
     </SidebarLayout>

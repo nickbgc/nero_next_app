@@ -1,8 +1,7 @@
 import Post from 'components/card/Post';
 import SidebarLayout from 'layouts/SidebarLayout';
-import { PostProps } from 'types';
 
-const data: Array<PostProps> = [
+const data: Array<any> = [
   {
     type: 'announcement',
     user: {

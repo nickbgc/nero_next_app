@@ -8,6 +8,7 @@ import { PostProps } from 'types';
 import YouTube from 'react-youtube';
 import CommerceCard from './CommerceCard';
 import Link from 'next/link';
+import CommentStream from 'components/stream/CommentStream';
 
 export default function Post(props: PostProps) {
   return (
@@ -119,6 +120,9 @@ export default function Post(props: PostProps) {
                 </div>
               )
             }
+          </div>
+          <div className="py-2">
+            <CommentStream comments={props.comments} />
           </div>
         </a>
       </Link>

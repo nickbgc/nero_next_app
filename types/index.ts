@@ -26,6 +26,7 @@ export type PostProps = {
     more_button_text: string;
     items: Array<CommerceCardProps>;
   };
+  comments: Array<any>;
 };
 
 export type CommerceCardProps = {

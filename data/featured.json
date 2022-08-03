@@ -6,12 +6,32 @@
     "description": "",
     "date": "7/15/2022",
     "pointsval": 5,
-    "user1": "ClackClack",
-    "comment1": "I was there! ",
-    "user2": "You_And_Me",
-    "comment2": "You're so lucky. I was supposed to go to that show but got Covid.",
-    "user3": "TaylorM",
-    "comment3": "The lights were incredible, and I could feel my kidneys shake on the drops!"
+    "comments": [
+      {
+        "id": 1,
+        "text": "I was there!",
+        "author": {
+          "name": "ClackClack",
+          "avatar": "https://i.pravatar.cc/300?img=23"
+        }
+      },
+      {
+        "id": 2,
+        "text": "You're so lucky. I was supposed to go to that show but got Covid.",
+        "author": {
+          "name": "You_And_Me",
+          "avatar": "https://i.pravatar.cc/300?img=3"
+        }
+      },
+      {
+        "id": 3,
+        "text": "The lights were incredible, and I could feel my kidneys shake on the drops!",
+        "author": {
+          "name": "TaylorM",
+          "avatar": "https://i.pravatar.cc/300?img=4"
+        }
+      }
+    ]
   },
   {
     "file": "Copy of 20210711_A76107.MP4",
@@ -20,12 +40,16 @@
     "description": "",
     "date": "7/15/2022",
     "pointsval": 5,
-    "user1": "Mark",
-    "comment1": "I can see myself. Right.... wail. No I can't",
-    "user2": "",
-    "comment2": "",
-    "user3": "",
-    "comment3": ""
+    "comments": [
+      {
+        "id": 1,
+        "text": "I can see myself. Right.... wail. No I can't",
+        "author": {
+          "name": "Mark",
+          "avatar": "https://i.pravatar.cc/300?img=5"
+        }
+      }
+    ]
   },
   {
     "file": "Copy of 20210711_A76108.MP4",
@@ -34,12 +58,24 @@
     "description": "",
     "date": "7/15/2022",
     "pointsval": 5,
-    "user1": "AlwaysOn",
-    "comment1": "This looks just like the show in Barcelona. ",
-    "user2": "Greg",
-    "comment2": "There's the girl of my dreams. Front row.",
-    "user3": "",
-    "comment3": ""
+    "comments": [
+      {
+        "id": 1,
+        "text": "This looks just like the show in Barcelona. ",
+        "author": {
+          "name": "AlwaysOn",
+          "avatar": "https://i.pravatar.cc/300?img=6"
+        }
+      },
+      {
+        "id": 2,
+        "text": "There's the girl of my dreams. Front row.",
+        "author": {
+          "name": "Greg",
+          "avatar": "https://i.pravatar.cc/300?img=7"
+        }
+      }
+    ]
   },
   {
     "file": "Copy of Copy of Nero-9.jpg",
@@ -48,12 +84,32 @@
     "description": "",
     "date": "7/10/2022",
     "pointsval": 5,
-    "user1": "MabelMay",
-    "comment1": "Is there a full recording of the concert available? Can someone let me know?",
-    "user2": "Thereze",
-    "comment2": "I think it will be pay-per-view here soon",
-    "user3": "MabelMay",
-    "comment3": "Lit. I'm definitely buying it"
+    "comments": [
+      {
+        "id": 1,
+        "text": "Is there a full recording of the concert available? Can someone let me know?",
+        "author": {
+          "name": "MabelMay",
+          "avatar": "https://i.pravatar.cc/300?img=8"
+        }
+      },
+      {
+        "id": 2,
+        "text": "I think it will be pay-per-view here soon",
+        "author": {
+          "name": "Thereze",
+          "avatar": "https://i.pravatar.cc/300?img=9"
+        }
+      },
+      {
+        "id": 3,
+        "text": "Lit. I'm definitely buying it",
+        "author": {
+          "name": "MabelMay",
+          "avatar": "https://i.pravatar.cc/300?img=8"
+        }
+      }
+    ]
   },
   {
     "file": "Copy of 20210711_A76111.MP4",
@@ -61,13 +117,7 @@
     "title": "More of the London Crowd",
     "description": "",
     "date": "7/10/2022",
-    "pointsval": 5,
-    "user1": "",
-    "comment1": "",
-    "user2": "",
-    "comment2": "",
-    "user3": "",
-    "comment3": ""
+    "pointsval": 5
   },
   {
     "file": "Copy of 20210711_A76135.MP4",
@@ -76,12 +126,24 @@
     "description": "",
     "date": "7/10/2022",
     "pointsval": 5,
-    "user1": "SebastianR",
-    "comment1": "This song always gets me. It's my senior year breakup song",
-    "user2": "Celine",
-    "comment2": "Nobody's ever broken up with me :)",
-    "user3": "",
-    "comment3": ""
+    "comments": [
+      {
+        "id": 1,
+        "text": "This song always gets me. It's my senior year breakup song",
+        "author": {
+          "name": "SebastianR",
+          "avatar": "https://i.pravatar.cc/300?img=11"
+        }
+      },
+      {
+        "id": 2,
+        "text": "TNobody's ever broken up with me :)",
+        "author": {
+          "name": "Celine",
+          "avatar": "https://i.pravatar.cc/300?img=12"
+        }
+      }
+    ]
   },
   {
     "file": "Copy of Copy of Copy of dreams.mp4",
@@ -90,12 +152,24 @@
     "description": "",
     "date": "7/10/2022",
     "pointsval": 5,
-    "user1": "Meghanm",
-    "comment1": "We listen to this in the palace. Haha",
-    "user2": "NigelW",
-    "comment2": "Sure you do. And I'm the Queen",
-    "user3": "",
-    "comment3": ""
+    "comments": [
+      {
+        "id": 1,
+        "text": "We listen to this in the palace. Haha",
+        "author": {
+          "name": "Meghanm",
+          "avatar": "https://i.pravatar.cc/300?img=13"
+        }
+      },
+      {
+        "id": 2,
+        "text": "Sure you do. And I'm the Queen",
+        "author": {
+          "name": "NigelW",
+          "avatar": "https://i.pravatar.cc/300?img=14"
+        }
+      }
+    ]
   },
   {
     "file": "Copy of Copy of Copy of entrance.mp4",
@@ -104,12 +178,24 @@
     "description": "",
     "date": "6/30/2022",
     "pointsval": 5,
-    "user1": "Branson",
-    "comment1": "Iniza. Worst sunburn of my LIFE",
-    "user2": "CleverGirl",
-    "comment2": "Uhhhh Sunscreen?",
-    "user3": "",
-    "comment3": ""
+    "comments": [
+      {
+        "id": 1,
+        "text": "Iniza. Worst sunburn of my LIFE",
+        "author": {
+          "name": "Branson",
+          "avatar": "https://i.pravatar.cc/300?img=15"
+        }
+      },
+      {
+        "id": 2,
+        "text": "Uhhhh Sunscreen?",
+        "author": {
+          "name": "CleverGirl",
+          "avatar": "https://i.pravatar.cc/300?img=16"
+        }
+      }
+    ]
   },
   {
     "file": "Copy of Copy of Copy of menyou.mp4",
@@ -118,11 +204,23 @@
     "description": "",
     "date": "6/30/2022",
     "pointsval": 5,
-    "user1": "NeroMan",
-    "comment1": "Anyone seen this several times live? Is it always this good? Amazing",
-    "user2": "ClackClack",
-    "comment2": "Yes and YES",
-    "user3": "",
-    "comment3": ""
+    "comments": [
+      {
+        "id": 1,
+        "text": "Anyone seen this several times live? Is it always this good? Amazing",
+        "author": {
+          "name": "NeroMan",
+          "avatar": "https://i.pravatar.cc/300?img=17"
+        }
+      },
+      {
+        "id": 2,
+        "text": "Yes and YES",
+        "author": {
+          "name": "ClackClack",
+          "avatar": "https://i.pravatar.cc/300?img=18"
+        }
+      }
+    ]
   }
 ]

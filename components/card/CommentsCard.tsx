@@ -3,7 +3,7 @@ type CommentCardProps = {
     name: string;
     avatar: string;
   };
-  comment: string;
+  text: string;
   date: string;
 };
 
@@ -24,10 +24,9 @@ export function CommentCard(props: CommentCardProps) {
               {props.author.name}
             </a>
           </div>
-          <p className="mt-0.5 text-sm text-gray-400">Commented {props.date}</p>
         </div>
         <div className="mt-2 text-sm text-gray-100">
-          <p>{props.comment}</p>
+          <p>{props.text}</p>
         </div>
       </div>
     </>

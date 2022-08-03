@@ -2,91 +2,9 @@ import CommerceCard from 'components/card/CommerceCard';
 import SidebarLayout from 'layouts/SidebarLayout';
 import { CommerceCardProps } from 'types';
 import { Tab } from '@headlessui/react';
-import { PostProps } from 'types';
 import Post from 'components/card/Post';
 import shop from '../../data/shop.json';
-
-const data: Array<PostProps> = [
-  {
-    type: 'announcement',
-    user: {
-      name: 'John Doe',
-      avatar: 'https://i.pravatar.cc/300?img=3',
-    },
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    date: '1 hour ago',
-    interaction_reward: 4,
-  },
-  {
-    type: 'video',
-    user: {
-      name: 'John Doe',
-      avatar: 'https://www.youtube.com/watch?v=TdofGK2jY88',
-    },
-    text: 'Vegas Highlights',
-    date: '1 hour ago',
-    interaction_reward: 4,
-  },
-  {
-    type: 'section',
-    section: {
-      title: 'Trending Merchandise',
-      more_button_text: 'View more in store',
-      type: 'merch',
-      items: [
-        {
-          type: 'merch',
-          available: 10,
-          purchase_reward: 4,
-          interaction_reward: 4,
-          title: 'Lorem ipsum dolor sit amet',
-          image: 'https://i.pravatar.cc/300?img=1',
-        },
-        {
-          type: 'merch',
-          available: 10,
-          purchase_reward: 4,
-          interaction_reward: 4,
-          title: 'Nero Tour Shirt',
-          image: 'https://i.pravatar.cc/300?img=4',
-        },
-        {
-          type: 'experience',
-          available: 10,
-          purchase_reward: 4,
-          interaction_reward: 4,
-          title: 'Dinner before the show',
-          image: 'https://i.pravatar.cc/300?img=12',
-        },
-        {
-          type: 'experience',
-          available: 10,
-          purchase_reward: 4,
-          interaction_reward: 4,
-          title: 'VIP Experience',
-          image: 'https://i.pravatar.cc/300?img=10',
-        },
-      ],
-    },
-    user: {
-      name: 'John Doe',
-      avatar: 'https://i.pravatar.cc/300?img=2',
-    },
-    interaction_reward: 0,
-    text: '',
-  },
-  {
-    type: 'poll',
-    text: 'We want to thank everyone who came out yesterday, what a show!',
-    user: {
-      name: 'John Doe',
-      avatar: 'https://i.pravatar.cc/300?img=1',
-    },
-    date: '35 min ago',
-    poll_options: ['Marshamallow', 'Chris Lake', 'Tiesto', 'deadmau5'],
-    interaction_reward: 2,
-  },
-];
+import featured from '../../data/featured.json';
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -100,6 +18,14 @@ const merch_data: Array<CommerceCardProps> = shop.map((i) => ({
 const experience_data: Array<CommerceCardProps> = shop.map((i) => ({
   ...i,
   type: 'experience',
+}));
+
+const data: Array<any> = featured.map((f, i) => ({
+  ...f,
+  type: 'video',
+  user: f.comments && f.comments[i]?.author,
+  interaction_reward: f.pointsval,
+  text: f.title,
 }));
 
 const Feed = () => {
