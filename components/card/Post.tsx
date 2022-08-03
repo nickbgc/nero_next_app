@@ -97,26 +97,39 @@ export default function Post(props: PostProps) {
               props.type === 'video' && (
                 <div className="relative flex flex-col">
                   <div className="flex w-full h-[28rem] ">
-                    <YouTube
-                      opts={{ width: '100%', height: '100%' }}
-                      videoId="llDikI2hTtk"
-                      className="w-full h-full"
-                    />
+                    {
+                      // @ts-ignore
+                      props.filetype === 'image' ? (
+                        <img
+                          src={props.file}
+                          className="w-full h-full"
+                          alt="Nero Image"
+                        />
+                      ) : (
+                        <YouTube
+                          opts={{ width: '100%', height: '100%' }}
+                          videoId={props.file}
+                          className="w-full h-full"
+                        />
+                      )
+                    }
                   </div>
-                  <div className="bottom-0 left-0 w-full h-auto max-w-md py-4 ">
-                    <div className="flex flex-col text-gray-200 divide-y divide-light_background">
-                      <p className="py-1 text-2xl font-bold text-white lg:text-4xl">
-                        {props.text}
-                      </p>
-                      <p className="py-1">View to Earn</p>
-                      <div className="flex items-center gap-2 py-2">
-                        <p className="text-xl font-bold">
-                          {props.interaction_reward}{' '}
+                  {props.text && (
+                    <div className="bottom-0 left-0 w-full h-auto max-w-md py-4 ">
+                      <div className="flex flex-col text-gray-200 divide-y divide-light_background">
+                        <p className="py-1 text-2xl font-bold text-white lg:text-4xl">
+                          {props.text}
                         </p>
-                        <CurrencyDollarIcon className="w-6 h-6 text-orange-500" />
+                        <p className="py-1">View to Earn</p>
+                        <div className="flex items-center gap-2 py-2">
+                          <p className="text-xl font-bold">
+                            {props.interaction_reward}{' '}
+                          </p>
+                          <CurrencyDollarIcon className="w-6 h-6 text-orange-500" />
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               )
             }

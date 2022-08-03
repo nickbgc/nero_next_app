@@ -1,85 +1,145 @@
 import Post from 'components/card/Post';
 import SidebarLayout from 'layouts/SidebarLayout';
 
-const data: Array<any> = [
+const data = [
   {
-    type: 'announcement',
-    user: {
-      name: 'John Doe',
-      avatar: 'https://i.pravatar.cc/300?img=3',
-    },
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    date: '1 hour ago',
-    interaction_reward: 4,
-  },
-  {
+    file: 'yAs25IAm1Wc',
     type: 'video',
-    user: {
-      name: 'John Doe',
-      avatar: 'https://www.youtube.com/watch?v=TdofGK2jY88',
-    },
-    text: 'Vegas Highlights',
-    date: '1 hour ago',
-    interaction_reward: 4,
+    hidden: 'Fan View',
+    date: '8/1/2022',
+    pointsval: 5,
+    comments: [
+      {
+        text: "This song always gets me. It's my senior year breakup song",
+        author: {
+          name: 'SebastianR',
+          avatar: 'https://i.pravatar.cc/300?img=12',
+        },
+      },
+      {
+        text: "Nobody's ever broken up with me :)",
+        author: {
+          name: 'Celine',
+          avatar: 'https://i.pravatar.cc/300?img=15',
+        },
+      },
+    ],
   },
   {
-    type: 'section',
-    section: {
-      title: 'Trending Merchandise',
-      more_button_text: 'View more in store',
-      type: 'merch',
-      items: [
-        {
-          type: 'merch',
-          available: 10,
-          purchase_reward: 4,
-          interaction_reward: 4,
-          title: 'Lorem ipsum dolor sit amet',
-          image: 'https://i.pravatar.cc/300?img=1',
+    file: '/CONCERTS/Copy of Copy of Nero-17.jpg',
+    hidden: 'Fan stage',
+    type: 'video',
+    filetype: 'image',
+    date: '8/1/2022',
+    pointsval: 5,
+    comments: [
+      {
+        text: 'Anyone seen this several times live? Is it always this good? Amazing',
+        author: {
+          name: 'NeroMan',
+          avatar: 'https://i.pravatar.cc/300?img=17',
         },
-        {
-          type: 'merch',
-          available: 10,
-          purchase_reward: 4,
-          interaction_reward: 4,
-          title: 'Nero Tour Shirt',
-          image: 'https://i.pravatar.cc/300?img=4',
+      },
+      {
+        text: 'Yes and YES',
+        author: {
+          name: 'ClackClack',
+          avatar: 'https://i.pravatar.cc/300?img=18',
         },
-        {
-          type: 'experience',
-          available: 10,
-          purchase_reward: 4,
-          interaction_reward: 4,
-          title: 'Dinner before the show',
-          image: 'https://i.pravatar.cc/300?img=12',
-        },
-        {
-          type: 'experience',
-          available: 10,
-          purchase_reward: 4,
-          interaction_reward: 4,
-          title: 'VIP Experience',
-          image: 'https://i.pravatar.cc/300?img=10',
-        },
-      ],
-    },
-    user: {
-      name: 'John Doe',
-      avatar: 'https://i.pravatar.cc/300?img=2',
-    },
-    interaction_reward: 0,
-    text: '',
+      },
+    ],
   },
   {
-    type: 'poll',
-    text: 'We want to thank everyone who came out yesterday, what a show!',
-    user: {
-      name: 'John Doe',
-      avatar: 'https://i.pravatar.cc/300?img=1',
-    },
-    date: '35 min ago',
-    poll_options: ['Marshamallow', 'Chris Lake', 'Tiesto', 'deadmau5'],
-    interaction_reward: 2,
+    file: 'a_Cp_7bynBQ',
+    type: 'video',
+    hidden: 'Fan video',
+    date: '8/1/2022',
+    pointsval: 5,
+    comments: [
+      {
+        id: 1,
+        text: 'I was there!',
+        author: {
+          name: 'ClackClack',
+          avatar: 'https://i.pravatar.cc/300?img=23',
+        },
+      },
+      {
+        id: 2,
+        text: "You're so lucky. I was supposed to go to that show but got Covid.",
+        author: {
+          name: 'You_And_Me',
+          avatar: 'https://i.pravatar.cc/300?img=3',
+        },
+      },
+      {
+        id: 3,
+        text: 'The lights were incredible, and I could feel my kidneys shake on the drops!',
+        author: {
+          name: 'TaylorM',
+          avatar: 'https://i.pravatar.cc/300?img=4',
+        },
+      },
+    ],
+  },
+  {
+    file: '/CONCERTS/Copy of 20220101-_DSC5269.jpg',
+    hidden: 'Fan Stage',
+    type: 'video',
+    date: '8/1/2022',
+    pointsval: 5,
+    filetype: 'image',
+    comments: [
+      {
+        id: 1,
+        text: 'This looks just like the show in Barcelona. ',
+        author: {
+          name: 'AlwaysOn',
+          avatar: 'https://i.pravatar.cc/300?img=6',
+        },
+      },
+      {
+        id: 2,
+        text: "There's the girl of my dreams. Front row.",
+        author: {
+          name: 'Greg',
+          avatar: 'https://i.pravatar.cc/300?img=7',
+        },
+      },
+    ],
+  },
+  {
+    file: 'uVHpyZzwmnQ',
+    type: 'video',
+    hidden: 'Fan view Front row',
+    date: '8/1/2022',
+    pointsval: 5,
+    comments: [
+      {
+        id: 1,
+        text: 'Is there a full recording of the concert available? Can someone let me know?',
+        author: {
+          name: 'MabelMay',
+          avatar: 'https://i.pravatar.cc/300?img=8',
+        },
+      },
+      {
+        id: 2,
+        text: 'I think it will be pay-per-view here soon',
+        author: {
+          name: 'Thereze',
+          avatar: 'https://i.pravatar.cc/300?img=9',
+        },
+      },
+      {
+        id: 3,
+        text: "Lit. I'm definitely buying it",
+        author: {
+          name: 'MabelMay',
+          avatar: 'https://i.pravatar.cc/300?img=8',
+        },
+      },
+    ],
   },
 ];
 
@@ -88,6 +148,7 @@ export default function Explore() {
     <SidebarLayout title={'Explore'}>
       <div className="w-full divide-y divide-light_background">
         {data.map((post, index) => (
+          // @ts-ignore
           <Post key={post.type + index} {...post} />
         ))}
         <div />

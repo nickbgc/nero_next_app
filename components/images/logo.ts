@@ -1,3 +1,3 @@
-import KryptonomicLogo from '../../public/kryptonomic.png';
+import KryptonomicLogo from '../../public/NERO_LOGO_WHITE.png';
 
 export default KryptonomicLogo;

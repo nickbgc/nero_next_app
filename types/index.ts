@@ -11,6 +11,7 @@ export type ModalProps = {
 };
 
 export type PostProps = {
+  file: string | string[] | any | MediaStream | undefined;
   type: 'video' | 'announcement' | 'poll' | 'text' | 'section';
   text: string;
   user: {
@@ -18,7 +19,7 @@ export type PostProps = {
     avatar: string;
   };
   date?: string;
-  interaction_reward: number;
+  interaction_reward?: number;
   poll_options?: string[];
   section?: {
     type: 'merch' | 'experience';

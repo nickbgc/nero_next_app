@@ -12,8 +12,9 @@
     "comment3": ""
   },
   {
-    "file": "Copy of Copy of Nero-17.jpg",
+    "file": "/CONCERTS/Copy of Copy of Nero-17.jpg",
     "hidden": "Fan stage",
+    "filetype": "image",
     "date": "8/1/2022",
     "pointsval": 5,
     "user1": "NeroMan",
@@ -40,6 +41,7 @@
     "hidden": "Fan Stage",
     "date": "8/1/2022",
     "pointsval": 5,
+    "filetype": "image",
     "user1": "Mark",
     "comment1": "I can see myself. Right.... wail. No I can't",
     "user2": "",

@@ -1,11 +1,12 @@
 import { KryptonomicLogo } from 'components/images';
 import { ApplicationContext } from 'context/ApplicationContext';
 import Image from 'next/image';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/solid';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -74,6 +75,14 @@ const AuthenticatedButton = () => {
 
 export default function Navbar() {
   const { login, user } = useContext(ApplicationContext);
+  const router = useRouter();
+  useEffect(() => {
+    if (user) {
+      if (router.pathname.split('/')[0] !== 'app') {
+        router.push('/app/community');
+      }
+    }
+  }, [user]);
   return (
     <header className="bg-light_background">
       <nav className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8" aria-label="Top">

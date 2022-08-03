@@ -113,7 +113,7 @@ export default function SidebarLayout({ children, title }: ReactProps) {
                     </div>
                   </Transition.Child>
                   <div className="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
-                    <div className="relative flex items-center flex-shrink-0 w-6 h-6 ml-4">
+                    <div className="relative flex items-center flex-shrink-0 h-8 py-12 ml-4">
                       <Image
                         src={KryptonomicLogo}
                         alt="Workflow"
@@ -183,7 +183,7 @@ export default function SidebarLayout({ children, title }: ReactProps) {
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex flex-col flex-1 min-h-0 bg-sidebar-background">
             <div className="flex flex-col flex-1 pt-5 pb-4 overflow-y-auto">
-              <div className="relative flex items-center flex-shrink-0 w-6 h-6 px-4">
+              <div className="relative flex items-center flex-shrink-0 h-8 px-4 py-12">
                 <Image src={KryptonomicLogo} alt="Kryptonomic" />
               </div>
               <nav className="flex-1 px-2 mt-5 space-y-1">
@@ -289,7 +289,7 @@ export default function SidebarLayout({ children, title }: ReactProps) {
                     </p>
                     <div className="py-2">
                       <img
-                        src="https://images.pexels.com/photos/7974892/pexels-photo-7974892.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        src="/CONCERTS/Copy of Copy of Nero-17.jpg"
                         alt="User 3"
                         className="object-cover w-full h-64 rounded-md"
                       />
@@ -305,7 +305,7 @@ export default function SidebarLayout({ children, title }: ReactProps) {
 
                     <div className="relative h-64 ">
                       <img
-                        src="https://images.pexels.com/photos/9809837/pexels-photo-9809837.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        src="/CONCERTS/Copy of 20220101-_DSC5269.jpg"
                         alt="User 3"
                         className="object-cover w-full h-64 rounded-md"
                       />
@@ -316,7 +316,7 @@ export default function SidebarLayout({ children, title }: ReactProps) {
                     <div className="py-4" />
                     <div className="relative h-64 ">
                       <img
-                        src="https://images.pexels.com/photos/1049622/pexels-photo-1049622.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        src="/CONCERTS/Copy of 20220101-_DSC4998 2.jpg"
                         alt="User 3"
                         className="object-cover w-full h-64 rounded-md"
                       />
