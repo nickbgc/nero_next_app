@@ -5,7 +5,7 @@ import { Tab } from '@headlessui/react';
 import Post from 'components/card/Post';
 import shop from '../../data/shop.json';
 import featured from '../../data/featured.json';
-import { Frame } from '.';
+import Link from 'next/link';
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -118,7 +118,15 @@ export default function Community() {
               <Feed />
             </Tab.Panel>
             <Tab.Panel className={classNames('rounded-xl')}>
-              <Frame />
+              <Link href={'/app/discussion'}>
+                <a>
+                  <img
+                    className="w-full h-auto"
+                    src="/community.jpeg"
+                    alt="discussion"
+                  />
+                </a>
+              </Link>
             </Tab.Panel>
             <Tab.Panel
               className={classNames('rounded-xl', 'focus:outline-none ')}
