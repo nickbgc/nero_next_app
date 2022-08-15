@@ -12,7 +12,7 @@ import { EthereumRpc } from 'utils';
 import Web3 from 'web3';
 
 const clientId =
-  'BPnVZ7aHOOmlD_QGKd0P13dJkNVbyBJFTOAFtQN8hPv6SYHWXhJJtrFEBaGXcsmTVAmn5r3qCvajYsDAtA7sMWE'; // get from https://dashboard.web3auth.io
+  'BG-TtDwXNgSf52Pfs3yESidwfKmdbF6u8kxsDWGYQH3TS3zfup27RSJH4k03CRpPpZWqNUth0D6-IL6LxQktb_g'; // get from https://dashboard.web3auth.io
 
 type ApplicationContextType = {
   provider: SafeEventEmitterProvider | null;
